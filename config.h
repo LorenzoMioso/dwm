@@ -8,10 +8,17 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Hack Nerd Font:size=10" };
 static const char dmenufont[]       = "Hack Nerd Font:size=10" ;
+//static const char *fonts[]          = { "monospace:size=10" };
+//static const char dmenufont[]       = "monospace:size=10";
+static const char col_gray1[]       = "#282828";
+static const char col_gray2[]       = "#3A3A3A";
+static const char col_gray3[]       = "#f9f5d7";
+static const char col_gray4[]       = "#eeeeee";
+static const char col_cyan[]        = "#458588";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { "#f9f5d7", "#282828", "#3A3A3A",  }, 
-	[SchemeSel]  = { "#f9f5d7", "#458588", "#458588",  }, 
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
 
 /* tagging */
@@ -52,7 +59,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 #include <X11/XF86keysym.h>
@@ -83,10 +90,12 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_plus,   setgaps,        {.i = +1 } },
-	{ MODKEY,                       XK_Home,   setgaps,        {.i = 5  } },
+	{ MODKEY,                       XK_Home,   setgaps,        {.i = 0  } },
+	{ MODKEY|ShiftMask,             XK_Home,   setgaps,        {.i = +5 } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("st ranger")},
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("st ncmpcpp")},
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("firefox")},
+	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("discord")},
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("powerButton")},
 	{ 0,                XF86XK_AudioPlay,      spawn,          SHCMD("mpc toggle")},
 	{ 0,                XF86XK_AudioNext,      spawn,          SHCMD("mpc next")},
