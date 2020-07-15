@@ -31,6 +31,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	{ "discord",  NULL,       NULL,       1<<9,         0,           -1 },
 //	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -60,7 +61,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 //static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-/static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 #include <X11/XF86keysym.h>
@@ -101,8 +102,12 @@ static Key keys[] = {
 	{ 0,                XF86XK_AudioPlay,      spawn,          SHCMD("mpc toggle")},
 	{ 0,                XF86XK_AudioNext,      spawn,          SHCMD("mpc next")},
 	{ 0,                XF86XK_AudioPrev,      spawn,          SHCMD("mpc prev")},
-	{ 0,         XF86XK_AudioRaiseVolume,      spawn,          SHCMD("mpc volume +5")},
-	{ 0,         XF86XK_AudioLowerVolume,      spawn,          SHCMD("mpc volume -5")},
+	{ 0,         XF86XK_AudioRaiseVolume,      spawn,          SHCMD("amixer set Master 5%+ && updateStatus") },
+	{ 0,         XF86XK_AudioLowerVolume,      spawn,          SHCMD("amixer set Master 5%- && updateStatus") },			
+	{ 0,             XF86XK_AudioMicMute,      spawn,          SHCMD("amixer set Capture toggle && updateStatus") },	
+    { 0,                XF86XK_AudioMute,      spawn,          SHCMD("amixer set Master toggle && updateStatus") },
+    { 0,          XF86XK_MonBrightnessUp,      spawn,          SHCMD("xbacklight +5 && updateStatus") },
+    { 0,        XF86XK_MonBrightnessDown,      spawn,          SHCMD("xbacklight -5 && updateStatus") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
