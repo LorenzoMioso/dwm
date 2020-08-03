@@ -95,6 +95,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Home,   setgaps,        {.i = 0  } },
 	{ MODKEY|ShiftMask,             XK_Home,   setgaps,        {.i = +5 } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("st ranger")},
+	{ MODKEY|ShiftMask,             XK_t,      spawn,          SHCMD("st translate")},
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("st ncmpcpp")},
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("firefox")},
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("discord")},
