@@ -100,6 +100,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -5 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+	{ MODKEY,                       XK_a,      spawn,          SHCMD("connectAukey")},
+	{ MODKEY|ShiftMask,             XK_a,      spawn,          SHCMD("disconnectAukey")},
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("st ranger")},
 	{ MODKEY|ShiftMask,             XK_t,      spawn,          SHCMD("st translate")},
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("st ncmpcpp")},
