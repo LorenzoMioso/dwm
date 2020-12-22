@@ -14,7 +14,7 @@ static const char col_gray1[]       = "#282828";
 static const char col_gray2[]       = "#3A3A3A";
 static const char col_gray3[]       = "#f9f5d7";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#458588";
+static const char col_cyan[]        = "#87AFAF";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -62,10 +62,10 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-//static const char *dmenucmd[] = { "dmenu_run", "-b" , "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
-//static const char *clipmenucmd[] = { "clipmenu", "-b" , "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4 , NULL };
-static const char *clipmenucmd[] = { "clipmenu", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-b" , "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+//static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
+static const char *clipmenucmd[] = { "clipmenu", "-b" , "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4 , NULL };
+//static const char *clipmenucmd[] = { "clipmenu", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 #include <X11/XF86keysym.h>
