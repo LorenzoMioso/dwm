@@ -7,7 +7,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Hack Nerd Font:pixelsize=14:antialias=true:autohint=true" };
-static const char dmenufont[]       = "Hack Nerd Font:size=12" ;
+static const char dmenufont[]       = "Hack Nerd Font:pixelsize=14:antialias=true:autohint=true" ;
 //static const char *fonts[]          = { "monospace:size=10" };
 //static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#282828";
