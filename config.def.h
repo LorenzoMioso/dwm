@@ -67,6 +67,7 @@ static const char *clipmenucmd[] = { "clipmenu", "-b" , "-fn", dmenufont, "-nb",
 static const char *termcmd[]  = { "st", NULL };
 
 #include <X11/XF86keysym.h>
+#include "nextprevtag.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -98,6 +99,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -5 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+    { MODKEY,                       XC_sb_right_arrow,      view_adjacent,  { .i = +1 } },
+	{ MODKEY,                       XC_sb_left_arrow,      view_adjacent,  { .i = -1 } },
 	{ MODKEY,                       XK_a,      spawn,          SHCMD("connectAukey")},
 	{ MODKEY|ShiftMask,             XK_a,      spawn,          SHCMD("disconnectAukey")},
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("st ranger")},
