@@ -101,6 +101,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
     { MODKEY,                       XK_Right,  view_adjacent,  {.i = +1 } },
 	{ MODKEY,                       XK_Left,   view_adjacent,  {.i = -1 } },
+	{ MODKEY,                       XK_c,      spawn,          SHCMD("=")},
 	{ MODKEY,                       XK_a,      spawn,          SHCMD("connectAukey")},
 	{ MODKEY|ShiftMask,             XK_a,      spawn,          SHCMD("disconnectAukey")},
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("st ranger")},
