@@ -129,6 +129,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	TAGKEYS(                        XK_F1,                     9)
+	TAGKEYS(                        XK_F2,                     10)
+	TAGKEYS(                        XK_F3,                     11)
+	TAGKEYS(                        XK_F4,                     12)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
