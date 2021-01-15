@@ -42,8 +42,6 @@ static const Layout layouts[] = {
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
-	{ "|M|",      centeredmaster },
-	{ ">M>",      centeredfloatingmaster },
 };
 
 /* key definitions */
@@ -83,8 +81,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} },
-	{ MODKEY|ShiftMask,             XK_u,      setlayout,      {.v = &layouts[4]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
@@ -100,6 +96,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Left,   view_adjacent,  {.i = -1 } },
 	{ MODKEY,                       XK_c,      spawn,          SHCMD("=")},
 	{ MODKEY,                       XK_r,      spawn,          SHCMD("st repoManager")},
+	{ MODKEY,                       XK_u,      spawn,          SHCMD("st syu")},
 	{ MODKEY,                       XK_a,      spawn,          SHCMD("connectAukey")},
 	{ MODKEY|ShiftMask,             XK_a,      spawn,          SHCMD("disconnectAukey")},
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("st ranger")},
