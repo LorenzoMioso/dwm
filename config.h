@@ -105,6 +105,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("firefox")},
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("discord")},
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("powerButton")},
+	{ MODKEY,                       XK_s,      spawn,          SHCMD("scrt")},
+    { 0,               XF86XK_Calculator,      spawn,          SHCMD("=") },
 	{ 0,                XF86XK_AudioPlay,      spawn,          SHCMD("mpc toggle")},
 	{ 0,                XF86XK_AudioNext,      spawn,          SHCMD("mpc next")},
 	{ 0,                XF86XK_AudioPrev,      spawn,          SHCMD("mpc prev")},
@@ -116,7 +118,6 @@ static Key keys[] = {
 	{ 0,             XF86XK_AudioMicMute,      spawn,          SHCMD("amixer set Capture toggle && bar_signal_microphone") },	
     { 0,          XF86XK_MonBrightnessUp,      spawn,          SHCMD("xbacklight +5 && bar_signal_brightness") },
     { 0,        XF86XK_MonBrightnessDown,      spawn,          SHCMD("xbacklight -5 && bar_signal_brightness") },
-    { 0,               XF86XK_Calculator,      spawn,          SHCMD("=") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
