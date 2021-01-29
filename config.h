@@ -108,12 +108,15 @@ static Key keys[] = {
 	{ 0,                XF86XK_AudioPlay,      spawn,          SHCMD("mpc toggle")},
 	{ 0,                XF86XK_AudioNext,      spawn,          SHCMD("mpc next")},
 	{ 0,                XF86XK_AudioPrev,      spawn,          SHCMD("mpc prev")},
+	{ ShiftMask, XF86XK_AudioRaiseVolume,      spawn,          SHCMD("mpc volume +5") },
+	{ ShiftMask, XF86XK_AudioLowerVolume,      spawn,          SHCMD("mpc volume -5") },			
 	{ 0,         XF86XK_AudioRaiseVolume,      spawn,          SHCMD("amixer set Master 5%+ && bar_signal_volume") },
 	{ 0,         XF86XK_AudioLowerVolume,      spawn,          SHCMD("amixer set Master 5%- && bar_signal_volume") },			
     { 0,                XF86XK_AudioMute,      spawn,          SHCMD("amixer set Master toggle && bar_signal_volume") },
 	{ 0,             XF86XK_AudioMicMute,      spawn,          SHCMD("amixer set Capture toggle && bar_signal_microphone") },	
     { 0,          XF86XK_MonBrightnessUp,      spawn,          SHCMD("xbacklight +5 && bar_signal_brightness") },
     { 0,        XF86XK_MonBrightnessDown,      spawn,          SHCMD("xbacklight -5 && bar_signal_brightness") },
+    { 0,               XF86XK_Calculator,      spawn,          SHCMD("=") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
