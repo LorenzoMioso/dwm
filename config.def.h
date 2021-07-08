@@ -29,7 +29,7 @@ static const char dwmdir[]               = "dwm";
 static const char localshare[]           = ".local/share";
 #endif // AUTOSTART_PATCH
 #if BAR_ANYBAR_PATCH
-static const int usealtbar               = 1;        /* 1 means use non-dwm status bar */
+static const int usealtbar               = 0;        /* 1 means use non-dwm status bar */
 static const char *altbarclass           = "Polybar"; /* Alternate bar class name */
 static const char *altbarcmd             = "$HOME/bar.sh"; /* Alternate bar launch command */
 #endif // BAR_ANYBAR_PATCH

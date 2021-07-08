@@ -29,7 +29,7 @@
  * dwmblocks: https://github.com/torrinfail/dwmblocks
  * https://dwm.suckless.org/patches/statuscmd/
  */
-#define BAR_DWMBLOCKS_PATCH 1
+#define BAR_DWMBLOCKS_PATCH 0
 
 /* Originally the dwmblocks + statuscmd patch used a user defined signal (SIGUSR1)
  * for communicating with dwmblocks to indicate update signal and what button was
@@ -51,7 +51,7 @@
  * Patch: https://gist.github.com/danbyl/54f7c1d57fc6507242a95b71c3d8fdea
  * https://dwm.suckless.org/patches/statuscmd/
  */
-#define BAR_DWMBLOCKS_SIGUSR1_PATCH 1
+#define BAR_DWMBLOCKS_SIGUSR1_PATCH 0
 
 /* This patch shows the titles of all visible windows in the status bar
  * (as opposed to showing only the selected one).
@@ -127,7 +127,7 @@
  * when clicking the status bar. Refer to the website for usage.
  * https://dwm.suckless.org/patches/statuscmd/
  */
-#define BAR_STATUSCMD_PATCH 1
+#define BAR_STATUSCMD_PATCH 0
 
 /* Status2d allows colors and rectangle drawing in your dwm status bar.
  * This patch is incompatible with the statuscolors patch which takes precedence.
@@ -227,7 +227,7 @@
  *
  * https://dwm.suckless.org/patches/anybar/
  */
-#define BAR_ANYBAR_PATCH 1
+#define BAR_ANYBAR_PATCH 0
 
 /* Anybar option to place the next bar depending on previous bar's position (top or bottom) */
 #define BAR_ANYBAR_TOP_AND_BOTTOM_BARS_PATCH 0
@@ -289,7 +289,7 @@
  * https://github.com/bakkeby/dwm-flexipatch/issues/50 (_IS_FLOATING patch)
  * https://dwm.suckless.org/patches/ewmhtags/
  */
-#define BAR_EWMHTAGS_PATCH 1
+#define BAR_EWMHTAGS_PATCH 0
 
 /* Allows the bar height to be explicitly set rather than being derived from font.
  * https://dwm.suckless.org/patches/bar_height/
@@ -345,7 +345,7 @@
  * This patch is incompatible with and takes precedence over the status2d patch.
  * https://dwm.suckless.org/patches/statuscolors/
  */
-#define BAR_STATUSCOLORS_PATCH 1
+#define BAR_STATUSCOLORS_PATCH 0
 
 /* This patch adds configuration options for horizontal and vertical padding in the status bar.
  * https://dwm.suckless.org/patches/statuspadding/
@@ -616,7 +616,7 @@
  * https://github.com/mihirlad55/dwm-ipc
  * https://dwm.suckless.org/patches/ipc/
  */
-#define IPC_PATCH 1
+#define IPC_PATCH 0
 
 /* Adds rule option for clients to avoid accidental termination by killclient for sticky windows.
  * https://dwm.suckless.org/patches/ispermanent/
@@ -874,7 +874,7 @@
 /* Allows restarting dwm without the dependency of an external script.
  * https://dwm.suckless.org/patches/selfrestart/
  */
-#define SELFRESTART_PATCH 1
+#define SELFRESTART_PATCH 0
 
 /* This patch allow clients to keep focus when being sent to another monitor.
  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-sendmon_keepfocus-6.2.diff
