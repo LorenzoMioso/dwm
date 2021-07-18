@@ -51,8 +51,8 @@ static const int toptab                  = False;               /* False means b
 static const int bar_height              = 0;   /* 0 means derive from font, >= 1 explicit height */
 #endif // BAR_HEIGHT_PATCH
 #if BAR_PADDING_PATCH
-static const int vertpad                 = 10;  /* vertical padding of bar */
-static const int sidepad                 = 10;  /* horizontal padding of bar */
+static const int vertpad                 = 5;  /* vertical padding of bar */
+static const int sidepad                 = 5;  /* horizontal padding of bar */
 #endif // BAR_PADDING_PATCH
 #if FOCUSONCLICK_PATCH
 static const int focusonwheel            = 0;
@@ -70,8 +70,8 @@ static const int riodraw_matchpid        = 1;  /* 0 or 1, indicates whether to m
 #endif // SWALLOW_PATCH
 #endif // RIODRAW_PATCH
 #if BAR_STATUSPADDING_PATCH
-static const int horizpadbar             = 2;   /* horizontal padding for statusbar */
-static const int vertpadbar              = 0;   /* vertical padding for statusbar */
+static const int horizpadbar             = 1;   /* horizontal padding for statusbar */
+static const int vertpadbar              = 1;   /* vertical padding for statusbar */
 #endif // BAR_STATUSPADDING_PATCH
 #if BAR_STATUSBUTTON_PATCH
 static const char buttonbar[]            = "<O>";
@@ -368,6 +368,7 @@ static Sp scratchpads[] = {
 static char *tagicons[][NUMTAGS] = {
 	[DEFAULT_TAGS]        = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "F1", "F2", "F3", "F4" },
 	[ALTERNATIVE_TAGS]    = { "A", "B", "C", "D", "E", "F", "G", "H", "I" },
+	/* [ALTERNATIVE_TAGS]    = { "", "", "", "", "", "", "", "", "", "", "", "", "" }, */
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };
 
